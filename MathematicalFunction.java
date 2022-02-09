@@ -4,8 +4,6 @@ public interface MathematicalFunction
   public double limitZero = 0.0000001d;
   public double epsilon = 0.0001d;
   
-  public boolean correct = true;
-  
   double function ( double x );
   
   public default double f ( double x )

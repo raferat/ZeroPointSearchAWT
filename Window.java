@@ -3,6 +3,9 @@ import java.awt.event.*;
 
 public class Window extends Frame
 {
+  public static final Font font = new Font ( "Thicc" , Font.PLAIN , 12 );
+  
+  
   private final Dimension size = new Dimension ( 800 , 900 );
   
   private final Dimension panelSize = new Dimension ( 800 , 30 );
@@ -66,6 +69,8 @@ public class Window extends Frame
       }
     });
     
+    
+    types.setFont ( font );
     
     types.add("Linearni");
     types.add("Mocninna");
@@ -170,10 +175,10 @@ public class Window extends Frame
         case "Geniometricke funkce - (soon)":
           break;
       }
-      
+      functionDisplay . correct = true;
     }
     else 
-      functionDisplay . func . correct = false;
+      functionDisplay . correct = false;
     
     functionDisplay.repaint();
     

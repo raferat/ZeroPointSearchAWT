@@ -68,6 +68,7 @@ public class MParameterPanel extends Panel
     {
       MLabel l = new MLabel ((char)('A'+i)+":");
       TextField d = new TextField ("0");
+      d.setFont ( Window.font );
       d.setForeground(Color.GRAY);
       d.addFocusListener(focus);
       d.addTextListener(listener);

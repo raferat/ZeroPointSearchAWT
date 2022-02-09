@@ -6,6 +6,8 @@ public class MFunctionDisplay extends Canvas
 {
   public MathematicalFunction func;
   
+  public boolean correct = true;
+  
   public MFunctionDisplay ( MathematicalFunction f )
   {
     super();
@@ -24,10 +26,16 @@ public class MFunctionDisplay extends Canvas
     g2d.setRenderingHint(RenderingHints.KEY_TEXT_ANTIALIASING,RenderingHints.VALUE_TEXT_ANTIALIAS_ON);
     g2d.setRenderingHint(RenderingHints.KEY_ANTIALIASING,RenderingHints.VALUE_ANTIALIAS_ON);
     
+    g.setFont ( new Font ( "Thicc" , Font.PLAIN , 24 ) );
     
     drawGuidLines(g);
-    if ( func . correct )
+    if ( correct )
       drawFunction(g);
+    else
+    {
+      g.setColor ( Color.RED );
+      g.drawString ( "Wrong input" , 0 , g.getFontMetrics () . getMaxAscent() );
+    }
     
     
     
